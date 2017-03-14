@@ -25,3 +25,4 @@ Example: netcat -k -l 192.168.0.6 8000
 echo "Hello Sindu" > send_file
 netcat <IP/Host> 8000 < send_file
 netcat 192.168.0.6 8000 < send_file
+
