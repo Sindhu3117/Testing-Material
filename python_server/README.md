@@ -4,3 +4,5 @@
 `source .venv/bin/activate`
 # Installing all the required python packages
 `pip install -r requirements.txt`
+# Running the server
+`python hello.py`
