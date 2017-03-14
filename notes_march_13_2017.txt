@@ -13,3 +13,15 @@ Example: netcat -l 8000
 # Created a file
 echo "Hello Sindu" > send_file
 netcat 127.0.0.1 8000 < send_file
+
+
+- Small socket example using netcat and host/IP
+-- Terminal 1
+netcat -k -l <IP/Host> <port number>
+Example: netcat -k -l 192.168.0.6 8000
+
+-- Terminal 2
+# Created a file
+echo "Hello Sindu" > send_file
+netcat <IP/Host> 8000 < send_file
+netcat 192.168.0.6 8000 < send_file
