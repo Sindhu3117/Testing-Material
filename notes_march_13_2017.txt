@@ -1,0 +1,15 @@
+- HTTP Status Codes reference
+https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html
+
+- Host Ports basics
+https://en.wikipedia.org/wiki/Port_(computer_networking)
+
+- Small socket example using netcat
+-- Terminal 1
+netcat -l <port number>
+Example: netcat -l 8000
+
+-- Terminal 2
+# Created a file
+echo "Hello Sindu" > send_file
+netcat 127.0.0.1 8000 < send_file
