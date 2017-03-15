@@ -19,6 +19,10 @@ def ret_404():
     # Sending status code 404
     abort(404)
 
+@app.errorhandler(500)
+def internal_server_error(e):
+    return 'Hello Sindhu! data 500 internal server error', 500
+
 @app.route("/500")
 def ret_500():
     # Sending status code 500
