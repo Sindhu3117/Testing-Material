@@ -44,3 +44,45 @@ In this tutorial, we will create a web service called User Management with the f
 |4|	POST|	/UserService/users/2|	Update User with Id 2	|N/A|
 |5|	DELETE|	/UserService/users/1|	Delete User with Id 1	|Idempotent|
 |6|	OPTIONS|	/UserService/users|	List the supported operations in web service	|Read Only|
+
+# Installing Light weight DB sqlite3
+http://zetcode.com/db/sqlitepythontutorial/
+`sudo apt install sqlite3`
+
+```$ sqlite3 test.db
+SQLite version 3.11.0 2016-02-15 17:29:24
+Enter ".help" for usage hints.
+sqlite> .tables
+sqlite> .exit
+```
+
+# After inserting records to check in sqlite3
+```$ sqlite3 test.db
+SQLite version 3.11.0 2016-02-15 17:29:24
+Enter ".help" for usage hints.
+sqlite> .tables
+Cars
+sqlite> select * from Cars;
+1|Audi|52642
+2|Mercedes|57127
+3|Skoda|9000
+4|Volvo|29000
+5|Bentley|350000
+6|Citroen|21000
+7|Hummer|41400
+8|Volkswagen|21600
+sqlite> .mode column
+sqlite> .headers on
+sqlite> select * from Cars;
+Id          Name        Price     
+----------  ----------  ----------
+1           Audi        52642     
+2           Mercedes    57127     
+3           Skoda       9000      
+4           Volvo       29000     
+5           Bentley     350000    
+6           Citroen     21000     
+7           Hummer      41400     
+8           Volkswagen  21600     
+sqlite>
+```
