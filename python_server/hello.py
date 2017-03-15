@@ -2,6 +2,7 @@ import json
 from flask import Flask, abort
 app = Flask(__name__)
 
+# Status Codes requests
 @app.route("/")
 def hello():
     return "Hello World!"
@@ -30,6 +31,8 @@ def ret_500():
     # Sending status code 500
     raise 'Error'
 
+
+# JSON requests
 @app.route("/simple_dict_json")
 def ret_simple_dict_json():
     # Sending json
@@ -67,6 +70,11 @@ def ret_objs_having_objs_json():
                    'dogs': ['panda', 'mish', 'tina', 'juli']}
     print json.dumps(sample_dict, indent=2)
     return str(sample_dict)
+
+
+# RESTful requests
+
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8000)
